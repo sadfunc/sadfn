@@ -10,7 +10,7 @@
     "gh-pages": "^0.12.0",
     "react-scripts": "0.9.5"
   },
-  "homepage": "http://sadfunction.github.io/sadfn",
+  "homepage": "https://sadfunction.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
