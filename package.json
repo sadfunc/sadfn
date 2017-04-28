@@ -1,6 +1,6 @@
 {
   "name": "sadfn",
-  "homepage": "sadfunction.github.io",
+  // "homepage": "sadfunction.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
