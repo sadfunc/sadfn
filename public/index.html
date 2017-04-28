@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="%PUBLIC_URL%/normalize.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <title>SadFunction -- Loading</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script>
+      $(document).ready(function move(){
+      var elem = document.getElementById("sad-progress"); 
+      var width = 1;
+      var id = setInterval(frame, 1000);
+        function frame() {
+          if(Math.floor(Math.random() * (2 - 0 + 1)) + 0 == 2){
+            if(width <= 43){
+              width = width + (width % Math.random() * 12);
+              elem.style.width = width + '%';
+            } else if (width > 88){
+              width = width - (width % Math.random() * 12);
+              elem.style.width = width - '%';
+            } else if(Math.floor(Math.random() * (2 - 0 + 1)) + 0 == 2){
+              width = width - (width % Math.random() * 12);
+              elem.style.width = width - '%';
+            } else {
+              width = width + (width % Math.random() * 12);
+              elem.style.width = width + '%';
+            }
+          }
+        }
+      });
+
+      /* Can use this function to animate dots following loading text if desired.
+      $(document).ready(function count(){
+        var i = 1;
+        setInterval(function(){
+          i++;
+          var dots = new Array(i % 7).join('.');
+          document.getElementById('sad-loading-text').innerHTML = "Loading" + dots;
+        }, 2000);
+      });
+      */
+    </script>
+  </body>
+</html>
